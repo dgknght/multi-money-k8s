@@ -19,5 +19,12 @@ spec:
       containers:
         - name: multi-money-web-container
           image: dgknght/multi-money:pr-4
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
           ports:
             - containerPort: 3204
