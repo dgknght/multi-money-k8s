@@ -3,7 +3,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: multi-money-web-deployment
-  namespace: staging
   labels:
     app: multi-money
 spec:
@@ -18,7 +17,7 @@ spec:
     spec:
       containers:
         - name: multi-money-web-container
-          image: dgknght/multi-money:pr-4
+          image: multi-money
           resources:
             requests:
               memory: "64Mi"
