@@ -8,5 +8,5 @@ resources:
 namespace: production
 images:
   - name: multi-money
-    newName: dgknght/multi-money
+    newName: docker.io/dgknght/multi-money
     newTag: latest
