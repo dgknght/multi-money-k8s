@@ -9,4 +9,4 @@ namespace: staging
 images:
   - name: multi-money
     newName: registry.hub.docker.com/dgknght/multi-money
-    newTag: pr-4
+    newTag: pr-6
