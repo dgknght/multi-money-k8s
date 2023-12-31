@@ -9,4 +9,4 @@ namespace: production
 images:
   - name: multi-money
     newName: registry.hub.docker.com/dgknght/multi-money
-    newTag: latest
+    newTag: main-5c8d24e
