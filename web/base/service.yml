@@ -8,5 +8,5 @@ spec:
     app: multi-money
   ports:
     - port: 80
-      targetPort: 3204
+      targetPort: 3000
   type: LoadBalancer
