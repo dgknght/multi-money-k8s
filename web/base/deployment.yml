@@ -27,3 +27,14 @@ spec:
               cpu: "500m"
           ports:
             - containerPort: 3000
+          env:
+            - name: GOOGLE_OAUTH_CLIENT_ID
+              valueFrom:
+                secretKeyRef:
+                  name: google-oauth-client-id
+                  key: GOOGLE_OAUTH_CLIENT_ID
+            - name: GOOGLE_OAUTH_CLIENT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: google-oauth-client-secret
+                  key: GOOGLE_OAUTH_CLIENT_SECRET
