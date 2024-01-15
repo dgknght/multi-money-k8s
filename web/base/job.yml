@@ -1,0 +1,15 @@
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  generateName: sql-migrate-
+  annotations:
+    argocd.argoproj.io/hook: PostSync
+spec:
+  template:
+    spec:
+      containers:
+        - name: sql-migrate
+          image: dgknght/multi-money-migrate
+          restartPolicy: Never
+  backoffLimit: 2

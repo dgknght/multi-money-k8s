@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: multi-money-web-container
-          image: multi-money
+          image: multi-money-web
           resources:
             requests:
               memory: "64Mi"

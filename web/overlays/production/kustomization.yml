@@ -7,6 +7,9 @@ resources:
   - namespace.yml
 namespace: production
 images:
-  - name: multi-money
-    newName: registry.hub.docker.com/dgknght/multi-money
-    newTag: main-5c8d24e
+  - name: multi-money-web
+    newName: registry.hub.docker.com/dgknght/multi-money-web
+    newTag: pr-8-61ff70a
+  - name: multi-money-migrate
+    newName: registry.hub.docker.com/dgknght/multi-money-migrate
+    newTag: pr-8-61ff70a
