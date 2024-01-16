@@ -15,6 +15,10 @@ spec:
       labels:
         app: multi-money
     spec:
+      volumes:
+        - name: config
+          secret:
+            secretName: config
       containers:
         - name: multi-money-web-container
           image: multi-money-web
