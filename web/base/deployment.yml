@@ -33,7 +33,7 @@ spec:
             - containerPort: 3000
           env:
             - name: CONFIG
-              value: /etc/config/edn
+              value: /etc/config.edn
           volumeMounts:
             - name: config
               readOnly: true
