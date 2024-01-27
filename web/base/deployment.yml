@@ -2,39 +2,31 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: multi-money-web-deployment
+  name: multi-money-web
   labels:
-    app: multi-money
+    app: multi-money-web
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: multi-money
+      app: multi-money-web
   template:
     metadata:
       labels:
-        app: multi-money
+        app: multi-money-web
     spec:
-      volumes:
-        - name: config
-          secret:
-            secretName: config
       containers:
         - name: multi-money-web-container
           image: multi-money-web
           resources:
             requests:
-              memory: "64Mi"
+              memory: "512Mi"
               cpu: "250m"
             limits:
-              memory: "128Mi"
+              memory: "1024Mi"
               cpu: "500m"
           ports:
             - containerPort: 3000
-          env:
-            - name: CONFIG
-              value: /etc/mounts/config.edn
-          volumeMounts:
-            - name: config
-              readOnly: true
-              mountPath: /etc/mounts
+          envFrom:
+            - secretRef:
+                name: secret-config

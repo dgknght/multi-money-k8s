@@ -9,7 +9,7 @@ namespace: staging
 images:
   - name: multi-money-web
     newName: registry.hub.docker.com/dgknght/multi-money-web
-    newTag: pr-8-61ff70a
+    newTag: pr-8-8c1f023
   - name: multi-money-migrate
     newName: registry.hub.docker.com/dgknght/multi-money-migrate
-    newTag: pr-8-61ff70a
+    newTag: pr-8-8c1f023

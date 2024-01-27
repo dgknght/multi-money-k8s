@@ -1,4 +1,6 @@
 ---
 resources:
+  - sql.yml
   - deployment.yml
   - service.yml
+  - job.yml
